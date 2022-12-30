@@ -1,6 +1,7 @@
 import "./styles/globals.css"
 import Image from "next/image"
 import { Outfit } from "@next/font/google"
+import Navbar from "./components/Navbar"
 
 const outfit = Outfit({ subsets: ["latin"] })
 export default function RootLayout({
@@ -17,10 +18,11 @@ export default function RootLayout({
       <head />
 
       <body className="">
+        <Navbar />
         <div className="fixed h-screen m-0 p-0 w-screen -z-50">
           <Image
             className="object-cover"
-            src="/nebula.gif"
+            src="/assets/nebula.gif"
             alt="nebula background gif"
             fill
           />
