@@ -1,4 +1,9 @@
+import BookBox from "./components/BookBox"
 // download headwind extension to autosort classnames so we see the same thing
 export default function Home() {
-  return <div className=""></div>
+  return (
+    <div className="w-screen flex items-center justify-center">
+      <BookBox imgName="buddha.png" />
+    </div>
+  )
 }
