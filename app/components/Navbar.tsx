@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import React, { useEffect, useState } from "react"
+import NavLink from "./NavLink"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -28,7 +29,7 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           className={`${
             open && "bg-black"
-          }  rounded-lg mx-3 p-2 transition-colors duration-200`}
+          }  rounded-lg mx-3 p-2 transition-colors duration-200 sm:hidden`}
         >
           <Image
             src="/assets/icons/menu.svg"
@@ -41,8 +42,8 @@ export default function Navbar() {
         {/* Mobile Navbar */}
         <nav
           className={`${
-            !open && "opacity-0"
-          } absolute left-1/2 top-36 transform -translate-x-1/2 transition-all -translate-y-1/2  flex flex-col gap-2  bg-black p-4 w-[90%] rounded-lg`}
+            !open && "hidden"
+          } absolute left-1/2 top-36 transform -translate-x-1/2  -translate-y-1/2  flex flex-col gap-2  bg-black p-4 w-[90%] rounded-lg`}
         >
           <NavLink href="/services" text="Services" currentPath={pathname} />
           <NavLink
@@ -53,7 +54,7 @@ export default function Navbar() {
           <NavLink href="/contact" text="Contact" currentPath={pathname} />
         </nav>
         {/* Desktop Navbar */}
-        <nav className="hidden sm:flex sm:flex-row sm:gap-3 px-4">
+        <nav className="hidden sm:flex sm:flex-row sm:gap-3 sm:px-4">
           <NavLink href="/services" text="Services" currentPath={pathname} />
           <NavLink
             href="/appointment"
@@ -64,24 +65,5 @@ export default function Navbar() {
         </nav>
       </header>
     </>
-  )
-}
-
-interface NavLinkTypes {
-  href: string
-  text: string
-  currentPath: string | null
-}
-function NavLink({ href, text, currentPath }: NavLinkTypes) {
-  return (
-    <Link
-      href={href}
-      className={`text-xl font-medium   px-3 py-1 hover:bg-gradient rounded-lg sm:rounded-full transition-[background]  ${
-        href === currentPath && "bg-gradient"
-      }`}
-      about={`${text} Link`}
-    >
-      {text}
-    </Link>
   )
 }

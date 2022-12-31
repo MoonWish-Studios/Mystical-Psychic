@@ -2,6 +2,7 @@ import "./styles/globals.css"
 import Image from "next/image"
 import { Outfit } from "@next/font/google"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 const outfit = Outfit({ subsets: ["latin"] })
 export default function RootLayout({
   children,
@@ -27,6 +28,7 @@ export default function RootLayout({
           />
         </div>
         {children}
+        <Footer />
       </body>
     </html>
   )
