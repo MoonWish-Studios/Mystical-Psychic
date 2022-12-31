@@ -17,13 +17,15 @@ export default function Navbar() {
     <>
       <header className=" flex py-4 justify-between  items-center">
         {/* Logo */}
-        <Image
-          src="/assets/logo-with-text.png"
-          alt="Mystical Magic Logo"
-          width="200"
-          height="100"
-          className="ml-4"
-        />
+        <Link href="/">
+          <Image
+            src="/assets/logo-with-text.png"
+            alt="Mystical Magic Logo"
+            width="200"
+            height="100"
+            className="ml-4"
+          />
+        </Link>
         {/* Hamburger Menu */}
         <div
           onClick={() => setOpen(!open)}
