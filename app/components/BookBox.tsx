@@ -8,7 +8,7 @@ export default function BookBox({ imgName }: { imgName: string }) {
       className={`flex w-4/5 relative flex-col md:flex-row md:max-w-4xl rounded-xl  shadow-lg`}
     >
       <Image
-        src="/buddha.png"
+        src="/assets/buddha.png"
         style={{ objectFit: "cover" }}
         className="-z-10 rounded-xl"
         fill
