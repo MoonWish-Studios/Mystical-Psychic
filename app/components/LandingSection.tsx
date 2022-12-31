@@ -11,7 +11,7 @@ export default function LandingSection() {
           text="Tarot Readings"
         />
         <ReadingIcon
-          className="delay-75"
+          className=""
           src="/assets/palm-reading.png"
           text="Palm Readings"
         />
