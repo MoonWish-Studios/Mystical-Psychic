@@ -50,6 +50,7 @@ function ReadingIcon({
           fill
           priority={true}
           className="-z-50 object-cover rounded-xl"
+          quality={40}
           alt={text}
         />
         <p className="text-3xl text-center font-bold   text-white">{text}</p>
