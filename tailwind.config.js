@@ -8,11 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        textPrimary: "#F1E4F8",
+        textPrimary: "#FAFAFA",
         highlight: "#FFC225",
         darkBrown: "#2E1E12",
         gradient1: "#C82A88",
         gradient2: "#574C9E",
+      },
+      fontFamily: {
+        amarante: ["Amarante", "sans-serif"],
+        abril: ["Abril Fatface", "sans-serif"],
       },
     },
   },

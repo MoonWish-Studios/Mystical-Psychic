@@ -1,5 +1,10 @@
 import "./styles/globals.css"
+import Navbar from "./components/Navbar"
+import { Outfit } from "@next/font/google"
 import Image from "next/image"
+
+const outfit = Outfit({ subsets: ["latin"] })
+
 export default function RootLayout({
   children,
 }: {
@@ -13,7 +18,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className="h-[200vh]">
+      <body className={`h-[200vh] ${outfit.className}`}>
         <div className="fixed h-screen m-0 w-screen -z-50">
           <Image
             className=" object-cover"
@@ -22,6 +27,7 @@ export default function RootLayout({
             fill
           />
         </div>
+        <Navbar />
         {children}
       </body>
     </html>
