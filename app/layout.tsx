@@ -23,6 +23,7 @@ export default function RootLayout({
           <Image
             className="object-cover"
             src="/assets/nebula.gif"
+            priority={true}
             alt="nebula background gif"
             fill
           />

@@ -14,6 +14,16 @@ module.exports = {
         gradient1: "#C82A88",
         gradient2: "#574C9E",
       },
+
+      animation: {
+        fadeIn: "fadeIn 1.5s ease-in-out 1",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],

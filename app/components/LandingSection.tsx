@@ -4,14 +4,14 @@ import Link from "next/link"
 export default function LandingSection() {
   return (
     <div className="my-40">
-      <div className="flex gap-5 ">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8  ">
         <ReadingIcon
           className="-translate-y-16"
           src="/assets/tarot-reading.png"
           text="Tarot Readings"
         />
         <ReadingIcon
-          className=""
+          className="delay-75"
           src="/assets/palm-reading.png"
           text="Palm Readings"
         />
@@ -40,14 +40,15 @@ function ReadingIcon({
   className: string
 }) {
   return (
-    <div className={className}>
+    <div className={`${className} animate-fadeIn`}>
       <Link
         href="/services"
-        className="h-[550px] w-48 relative flex justify-center items-center rounded-xl bg-black bg-opacity-50 shadow-lg hover:scale-110 hover:outline duration-200 transition"
+        className="sm:h-[550px] h-[450px] w-40 sm:w-48 relative flex justify-center items-center rounded-xl bg-black bg-opacity-50 shadow-lg sm:hover:scale-110  hover:outline duration-200 transition hover:bg-opacity-0"
       >
         <Image
           src={src}
           fill
+          priority={true}
           className="-z-50 object-cover rounded-xl"
           alt={text}
         />
