@@ -3,7 +3,7 @@ import BookBox from "./components/BookBox"
 export default function Home() {
   return (
     <div className="w-full px-12 flex items-center justify-center">
-      <BookBox imgName="buddha.png" />
+      {/* <BookBox imgName="buddha.png" /> */}
     </div>
   )
 }
