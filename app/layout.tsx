@@ -1,4 +1,5 @@
 import "./styles/globals.css"
+
 import Image from "next/image"
 import { Outfit } from "@next/font/google"
 import Navbar from "./components/Navbar"

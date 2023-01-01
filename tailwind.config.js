@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        textPrimary: "#F1E4F8",
+        textPrimary: "#FAFAFA",
         highlight: "#FFC225",
         darkBrown: "#2E1E12",
         gradient1: "#C82A88",
@@ -23,6 +23,13 @@ module.exports = {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+      },
+      fontFamily: {
+        amarante: ["Amarante", "sans-serif"],
+        abril: ["Abril Fatface", "sans-serif"],
+      },
+      screens: {
+        xs: "500px",
       },
     },
   },
