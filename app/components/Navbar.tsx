@@ -1,58 +1,71 @@
 "use client"
-import React, { useState } from "react"
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import React, { useEffect, useState } from "react"
+import NavLink from "./NavLink"
 
 export default function Navbar() {
-  let [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  // set menu state
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    console.log(open)
+  })
   return (
-    <div className=" w-full  relative top-0 left-0 ">
-      <div className="md:flex md:px-10 px-7 mb-0 items-center justify-between  py-4">
-        <div className="cursor-pointer flex items-center">
-          <Link className="flex flex-row items-center space-x-3" href="/">
-            <Image src="/logo.svg" width={50} height={50} alt={""} />
-            <Image src="/logoText.svg" width={200} height={200} alt={""} />
-          </Link>
-        </div>
+    <>
+      <header className=" flex py-4 justify-between  items-center">
+        {/* Logo */}
+        <Link href="/">
+          <Image
+            src="/assets/logo-with-text.png"
+            alt="Mystical Magic Logo"
+            width="200"
+            height="100"
+            className="ml-4"
+          />
+        </Link>
+        {/* Hamburger Menu */}
         <div
           onClick={() => setOpen(!open)}
-          className=" absolute right-6 text-white top-7 z-[99999] cursor-pointer md:hidden"
+          className={`${
+            open && "bg-black"
+          }  rounded-lg mx-3 p-2 transition-colors duration-200 sm:hidden`}
         >
-          {open ? (
-            <Image src="../icons/close.svg" width={25} height={25} alt={""} />
-          ) : (
-            <Image src="../icons/menu.svg" width={28} height={28} alt={""} />
-          )}
+          <Image
+            src="/assets/icons/menu.svg"
+            alt="Menu Icon"
+            width="25"
+            height="25"
+          />
         </div>
-        <div
-          className={`md:flex md:opacity-100 opacity-100 md:items-center md:static text-xl md:text-base pb-0 absolute text-textPrimary md:space-x-8
-         md:z-auto z-[99] md:pt-0 pt-10 md:pl-0 pl-8 left-0 w-full md:w-auto ${
-           open ? `top-0 opacity-100 bg-black` : `top-[-490px]`
-         }`}
-        >
-          <div className="md:pb-0 pb-12">
-            <Link href="/services" className="md:hidden hover:text-highlight">
-              Home
-            </Link>
-          </div>
-          <div className="md:pb-0 pb-12">
-            <Link href="/services" className=" hover:text-highlight">
-              Services
-            </Link>
-          </div>
-          <div className="md:pb-0 pb-12">
-            <Link href="/contact" className=" hover:text-highlight">
-              Appointment
-            </Link>
-          </div>
 
-          <div className="md:pb-0 pb-12">
-            <Link className="hover:text-highlight" href="">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+        {/* Mobile Navbar */}
+        <nav
+          className={`${
+            !open && "hidden"
+          } absolute left-1/2 top-36 transform -translate-x-1/2  -translate-y-1/2  flex flex-col gap-2  bg-black p-4 w-[90%] rounded-lg`}
+        >
+          <NavLink href="/services" text="Services" currentPath={pathname} />
+          <NavLink
+            href="/appointment"
+            text="Appointment"
+            currentPath={pathname}
+          />
+          <NavLink href="/contact" text="Contact" currentPath={pathname} />
+        </nav>
+        {/* Desktop Navbar */}
+        <nav className="hidden sm:flex sm:flex-row sm:gap-3 sm:px-4">
+          <NavLink href="/services" text="Services" currentPath={pathname} />
+          <NavLink
+            href="/appointment"
+            text="Appointment"
+            currentPath={pathname}
+          />
+          <NavLink href="/contact" text="Contact" currentPath={pathname} />
+        </nav>
+      </header>
+    </>
   )
 }

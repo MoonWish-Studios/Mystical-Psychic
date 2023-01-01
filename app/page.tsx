@@ -1,11 +1,13 @@
 import BookBox from "./components/BookBox"
+import LandingSection from "./components/LandingSection"
 import InfoBlock from "./components/InfoBlock"
 // download headwind extension to autosort classnames so we see the same thing
 export default function Home() {
   return (
     <div className="">
-      <div className="w-screen flex items-center justify-center">
-        <BookBox imgName="buddha.png" />
+      <div className="w-full flex items-center justify-center">
+        <LandingSection />
+        {/* <BookBox imgName="buddha.png" /> */}
       </div>
       <div className="mt-16">
         <InfoBlock

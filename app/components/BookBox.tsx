@@ -8,12 +8,14 @@ export default function BookBox({ imgName }: { imgName: string }) {
       className={`flex w-4/5 relative flex-col md:flex-row md:max-w-4xl rounded-3xl bg-[url(/${imgName})] bg-cover shadow-lg`}
     >
       {/* <Image
-        className="-z-999 "
-        src={imgName}
+        src="/assets/buddha.png"
+        style={{ objectFit: "cover" }}
+        className="-z-10 rounded-xl"
+        fill
         alt={""}
         height={100}
         width={100}
-      /> */}
+      />  */}
 
       <div className="md:w-5/6 hidden md:block w-full h-56 md:h-auto object-cover md:w- rounded-t-lg md:rounded-none "></div>
       <div className="p-9 bg-black bg-opacity-30 md:w-screen pt-28 pb-28 text-textPrimary flex flex-col justify-start rounded-3xl">
