@@ -1,6 +1,5 @@
 import "./styles/globals.css"
-import Navbar from "./components/Navbar"
-import { Outfit } from "@next/font/google"
+
 import Image from "next/image"
 import { Outfit } from "@next/font/google"
 import Navbar from "./components/Navbar"
@@ -30,7 +29,6 @@ export default function RootLayout({
             fill
           />
         </div>
-        <Navbar />
         {children}
         <Footer />
       </body>

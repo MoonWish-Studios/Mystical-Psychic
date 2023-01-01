@@ -28,6 +28,9 @@ module.exports = {
         amarante: ["Amarante", "sans-serif"],
         abril: ["Abril Fatface", "sans-serif"],
       },
+      screens: {
+        xs: "500px",
+      },
     },
   },
   plugins: [],

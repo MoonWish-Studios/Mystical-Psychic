@@ -19,7 +19,7 @@ export default function InfoBlock({
   let imgState = reverse ? "lg:mr-16 md:mr-5" : ""
 
   return (
-    <div className="w-screen flex justify-center">
+    <div className="w-screen flex justify-center mb-16">
       <div
         className={`w-screen flex flex-col ${textState} md:container items-center  justify-center lg:pr-10 lg:pl-10 text-textPrimary`}
       >

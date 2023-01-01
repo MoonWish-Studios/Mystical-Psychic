@@ -9,7 +9,7 @@ export default function Home() {
         <LandingSection />
         {/* <BookBox imgName="buddha.png" /> */}
       </div>
-      <div className="mt-16">
+      <div className="">
         <InfoBlock
           reverse={false}
           title={"What is spirituality"}
@@ -52,6 +52,9 @@ export default function Home() {
           hides their strength and they steadily move towards their goal, no
           matter what negativity the others give them.
         </InfoBlock>
+      </div>
+      <div className="w-full flex items-center justify-center mb-20">
+        <BookBox img="assets/buddha.png" />
       </div>
     </div>
   )
