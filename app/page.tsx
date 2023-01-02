@@ -9,7 +9,7 @@ export default function Home() {
         <LandingSection />
       </div>
       <div className="">
-        {/* <InfoBlock
+        <InfoBlock
           reverse={false}
           title={"What is spirituality"}
           bottomText={true}
@@ -49,7 +49,7 @@ export default function Home() {
           them seem soft and weak. In truth, the Rabbit’s quiet personality
           hides their strength and they steadily move towards their goal, no
           matter what negativity the others give them.
-        </InfoBlock> */}
+        </InfoBlock>
       </div>
       <div className="w-full flex items-center justify-center mb-20">
         <BookBox img="/assets/buddha.png" />
