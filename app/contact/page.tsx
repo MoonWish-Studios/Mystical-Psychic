@@ -1,5 +1,4 @@
 "use client"
-import { GoogleMap } from "@react-google-maps/api"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"

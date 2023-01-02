@@ -45,7 +45,7 @@ export default function Navbar() {
         <nav
           className={`${
             !open && "hidden"
-          } absolute left-1/2 top-36 transform -translate-x-1/2  -translate-y-1/2  flex flex-col gap-2  bg-black p-4 w-[90%] rounded-lg`}
+          } absolute left-1/2 top-36 transform -translate-x-1/2 z-50  -translate-y-1/2  flex flex-col gap-2  bg-black p-4 w-[90%] rounded-lg`}
         >
           <NavLink href="/services" text="Services" currentPath={pathname} />
           <NavLink
