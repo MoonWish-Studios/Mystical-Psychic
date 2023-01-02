@@ -1,4 +1,12 @@
 /* insstall postcss language support extension to remove error */
+@import url("https://fonts.googleapis.com/css2?family=Amarante&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer components {
+  .bg-gradient {
+    @apply bg-gradient-to-r from-gradient1 to-gradient2;
+  }
+}
