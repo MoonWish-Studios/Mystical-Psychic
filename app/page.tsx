@@ -7,7 +7,6 @@ export default function Home() {
     <div className="">
       <div className="w-full flex items-center justify-center">
         <LandingSection />
-        {/* <BookBox imgName="buddha.png" /> */}
       </div>
       <div className="">
         <InfoBlock
@@ -22,7 +21,6 @@ export default function Home() {
           that you need. Im here to help you to tune into your energy and make
           sense of the past, present and future through your spiritual life.
         </InfoBlock>
-        {/* <InfoBlock reverse={true} /> */}
         <InfoBlock
           reverse={true}
           title={"Tree Of Life"}
@@ -54,7 +52,7 @@ export default function Home() {
         </InfoBlock>
       </div>
       <div className="w-full flex items-center justify-center mb-20">
-        <BookBox img="assets/buddha.png" />
+        <BookBox img="/assets/buddha.png" />
       </div>
     </div>
   )

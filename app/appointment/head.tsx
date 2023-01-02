@@ -1,12 +1,12 @@
 export default function Head() {
   return (
     <>
-      <title>Home | Mystical Magic Psychic</title>
+      <title>Appointment | Mystical Magic Psychic</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta charSet="utf-8" />
       <meta
         name="description"
-        content="Mystical Magic Psychic of Cypress is here to help guide and tune into your spiritual energy. The services we offer include Tarot Card Readings, Palm Readings, and Psychic Readings. Book an appointment now to have a session with me today!"
+        content="Book An Appointment with Mystical Magic Of Cypress"
       />
       <link rel="icon" href="/assets/logo.png" />
       <meta

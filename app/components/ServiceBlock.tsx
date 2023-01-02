@@ -14,10 +14,10 @@ export default function ServiceBlock({
 }) {
   return (
     <div className="flex justify-center mt-11 mb-11">
-      <div className="flex flex-col md:flex-row container items-center md:mt-10 sm:items-center ">
+      <div className="flex flex-col md:flex-row container md:mx-auto items-center md:mt-10 sm:items-center">
         <Image
           // lg:mr-20 md:mr-10
-          className=" md:mb-0 mb-10 lg:mr-16 md:mr-10"
+          className=" md:mb-0 mb-10 lg:mr-16 md:mr-10 md:ml-10 lg:ml-20"
           height={130}
           width={130}
           src={img}
